@@ -9,6 +9,7 @@ const errorHandler = require('./error-handlers/500.js');
 const logger = require('./middleware/logger.js');
 
 const v1Routes = require('./routes/v1.js');
+const v2Routes = require('./routes/v2.js');
 const authRoutes = require('./auth/routes.js');
 
 const app = express();
@@ -25,7 +26,7 @@ app.use(logger);
 app.use('/api/v1', v1Routes); // http://localhost:3001/api/v1/clothes
 app.use(authRoutes);
 
-// gapp.use('/api/v2', v2Routes); // http://localhost:3001/api/v1/clothes
+app.use('/api/v2', v2Routes); // http://localhost:3001/api/v2/clothes
 
 app.use('*', notFoundHandler);
 app.use(errorHandler);
