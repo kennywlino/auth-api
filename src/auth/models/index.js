@@ -1,4 +1,4 @@
-'use strict';
+/* 'use strict';
 
 const userModel = require('./users.js');
 const { Sequelize, DataTypes } = require('sequelize');
@@ -11,3 +11,4 @@ module.exports = {
   db: sequelize,
   users: userModel(sequelize, DataTypes),
 };
+ */
